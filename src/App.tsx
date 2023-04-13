@@ -1,8 +1,14 @@
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { theme } from '@golden-gamble/utils';
 import Header from './components/Header';
+
+const muiTheme = createTheme(theme);
 
 const App = () => {
   return (
-    <Header />
+    <ThemeProvider theme={muiTheme}>
+      <Header />
+    </ThemeProvider>
   )
 }
 
