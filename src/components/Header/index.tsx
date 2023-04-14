@@ -1,4 +1,5 @@
 import { publishEvent, MY_BETS_DRAWER } from '@golden-gamble/utils';
+import { navigateToUrl } from 'single-spa';
 
 import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
@@ -18,6 +19,20 @@ const Header = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Golden Gamble
           </Typography>
+          <Button
+            variant="text"
+            color="inherit"
+            onClick={() => navigateToUrl('/')}
+          >
+            Champions League
+          </Button>
+          <Button
+            variant="text"
+            color="inherit"
+            onClick={() => navigateToUrl('/account')}
+          >
+            Account
+          </Button>
           <Button
             variant="contained"
             color="secondary"
